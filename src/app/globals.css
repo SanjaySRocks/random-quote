@@ -1,0 +1,19 @@
+:root{
+    --text-color: white;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.747);
+    color: var(--text-color);
+}
+
+.quote{
+    color: aqua;
+    box-shadow: 30px;
+    padding: 10px;
+}
+
+.card-text{
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+}
