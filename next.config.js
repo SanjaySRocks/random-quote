@@ -2,8 +2,8 @@ const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
   // Existing configuration options
-  assetPrefix: isProd ? '' : '',
-  basePath: isProd ? '' : '',
+  basePath: isProd ? '/random-quote' : '',
+  assetPrefix: isProd ? '/random-quote/' : '',
   // Add this line
   output: 'export',
 };
