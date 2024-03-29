@@ -16,11 +16,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install SSH key
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to VPS
+        run: ssh root@nileshvishwa.com 'bash -s' < deploy.sh
+
+        
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
-
+      
       - name: Install dependencies
         run: npm install
 
@@ -32,3 +41,5 @@ jobs:
         with:
           branch: gh-pages  # Specify the branch to deploy to
           folder: ./out     # Change this to your Next.js build output directory
+
+      
