@@ -1,15 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export'
-}
-module.exports = nextConfig
+// const nextConfig = {}
+// module.exports = nextConfig
 
-// const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'production';
 
-// module.exports = {
-//   // Existing configuration options
-//   assetPrefix: isProd ? '/<repository>/' : '',
-//   basePath: isProd ? '/<repository>' : '',
-//   // Add this line
-//   output: 'export',
-// };
+module.exports = {
+  basePath: isProd ? '/random-quote' : '',
+  assetPrefix: isProd ? '/random-quote/' : '',
+  output: 'export',
+};
