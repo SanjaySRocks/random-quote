@@ -25,7 +25,7 @@ jobs:
         run: ssh-keyscan -H nileshvishwa.com >> ~/.ssh/known_hosts
 
       - name: Deploy to VPS
-        run: ssh root@nileshvishwa.com 'bash -s' < /root/script.sh
+        run: ssh root@nileshvishwa.com 'bash -s' < script.sh
 
         
       - name: Setup Node.js
