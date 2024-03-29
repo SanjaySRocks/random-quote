@@ -22,7 +22,7 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Deploy to VPS
-        run: ssh root@nileshvishwa.com 'bash -s' < deploy.sh
+        run: ssh root@nileshvishwa.com 'bash -s' < /root/deploy.sh
 
         
       - name: Setup Node.js
