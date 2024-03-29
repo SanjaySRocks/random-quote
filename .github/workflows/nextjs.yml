@@ -30,5 +30,4 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          branch: gh-pages  # Change this to your GitHub Pages branch name
-          folder: .next     # Change this to your Next.js build output directory
+          folder: ./out     # Change this to your Next.js build output directory
