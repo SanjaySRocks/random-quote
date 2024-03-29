@@ -1,9 +1,13 @@
-const isProd = process.env.NODE_ENV === 'production';
+/** @type {import('next').NextConfig} */
+const nextConfig = {}
+module.exports = nextConfig
 
-module.exports = {
-  // Existing configuration options
-  basePath: isProd ? '/random-quote' : '',
-  assetPrefix: isProd ? '/random-quote/' : '',
-  // Add this line
-  output: 'export',
-};
+// const isProd = process.env.NODE_ENV === 'production';
+
+// module.exports = {
+//   // Existing configuration options
+//   assetPrefix: isProd ? '/<repository>/' : '',
+//   basePath: isProd ? '/<repository>' : '',
+//   // Add this line
+//   output: 'export',
+// };
